@@ -183,12 +183,9 @@ public class CustomersPage {
 		elementutil.click(actions);
 		waitutil.waitForVisibility(view);
 		elementutil.click(view);
-		WebElement viewelement=driver.findElement(By.xpath("//strong[text()='"+nameField+"']"));
-		String actualmsg=viewelement.getText();
+		
 
-		System.out.println("verifyViewCustomer: "+ actualmsg);
-		return actualmsg;
-
+		
 
 
 

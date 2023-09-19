@@ -62,9 +62,7 @@ public class CustomerTest extends Base{
 		custpage.contactClick();
 		custpage.customersLink();
 		custpage.searchBar(customerName);
-		String actmsg=custpage.viewCustomer(customerName);
-		String expmsg=customerName;
-		Assert.assertEquals(actmsg, expmsg);
+		
 		
 		
 	}*/
