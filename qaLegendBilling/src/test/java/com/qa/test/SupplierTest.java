@@ -51,7 +51,7 @@ public class SupplierTest extends Base {
 
 
 	}
-	@Test(priority=3,groups= {"smoke"})
+	@Test(priority=4,groups= {"smoke"})
 	public void verifyviewSupplier(){
 		LoginPage lp=new LoginPage(driver);
 		lp.doLogin("admin", "123123");
@@ -70,7 +70,7 @@ public class SupplierTest extends Base {
 	}
 	
 	 
-	@Test(priority=4,groups= {"regression"})
+	@Test(priority=3,groups= {"regression"})
 	public void verifyEditSupplier(){
 
 		LoginPage lp=new LoginPage(driver);
@@ -104,7 +104,7 @@ public class SupplierTest extends Base {
 		sp.searchBar(supplierName);
 		String actualmsg=sp.delete();
 		String expmsg="This contact will be deleted";
-		System.out.println("verifydeletemessage:"+expmsg);
+		
 		
 		Assert.assertEquals(actualmsg, expmsg);
 		
@@ -115,6 +115,9 @@ public class SupplierTest extends Base {
 		
 		
 	}
+	 
+	
+	     
 }
 
 

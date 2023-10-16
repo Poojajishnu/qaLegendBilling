@@ -57,7 +57,7 @@ public class Base {
 	  			takeScreenShotOnFailure(iTestResult.getName());
 
 	  		}
-	  		//driver.quit();
+	  		driver.quit();
 	   }
 	  public String takeScreenShotOnFailure(String name) throws IOException {
 			String dateName = new SimpleDateFormat("yyyy_MM_dd_hh_mm").format(new Date());

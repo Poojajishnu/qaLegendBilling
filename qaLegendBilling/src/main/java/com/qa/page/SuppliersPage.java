@@ -54,18 +54,18 @@ public class SuppliersPage {
 	@FindBy(xpath="//*[text()='Contact added successfully']")
 	WebElement addmsg;
 
-	@FindBy(xpath="//input[contains(@class,'input-sm')]")
+	@FindBy(xpath="//input[contains(@class,'form-control input-sm')]")
 	WebElement search;
-	@FindBy(xpath="//h3[text()='All your Suppliers']")
-	WebElement searchText;
+	
 
 
 
 
-	@FindBy(xpath="//table[@id='contact_table']//tbody//tr[1]//td[7]")
+	@FindBy(xpath="//table[@id='contact_table']//tbody//tr[1]//td[7]//button")
 	WebElement actions;
-	@FindBy(xpath="//table[@id='contact_table']//tbody//tr[1]//td[7]//li[1]//a[contains(text(),' View')]")
-	WebElement view;
+	@FindBy(xpath="//table[@id='contact_table']//tbody//tr[1]//td[7]//a[contains(text(),' View')]")
+	WebElement view ;
+
 	@FindBy(xpath="//h1[text()='View Contact']")
 	WebElement viewcontact;
 
@@ -192,8 +192,10 @@ public class SuppliersPage {
 	{
 
 		elementutil.click(actions);
-		waitutil.waitelementClick(view);
+		
+		
 		elementutil.click(view);
+		waitutil.waitforvisible(viewcontact);
 
 		String actualMsg=elementutil.getText(viewcontact);
 		System.out.println("verifyViewSupplier: "+actualMsg);
@@ -241,16 +243,24 @@ public class SuppliersPage {
 	{
 		elementutil.click(actions);
 		
+		
+		
 		elementutil.click(delete);
 		
 		
 		
-		waitutil.waitForVisibility(okbutton);
+		waitutil.waitelementClick(okbutton);
 		elementutil.click(okbutton);
 		String actualmsg=elementutil.getText(deletemsg);
 		System.out.println("text of verifyDeletesupplier :"+actualmsg);
 		return actualmsg;
 
+		
+		
+		
+
+		
+	
 
 	}
 }

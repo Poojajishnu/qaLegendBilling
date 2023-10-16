@@ -80,8 +80,6 @@ public class CustomersPage {
 	@FindBy(xpath="//table[@id='contact_table']//tbody//tr[1]//td[8]//li[3]")
 	WebElement editbutton;
 
-	/*@FindBy(xpath="//table[@id='contact_table']//tbody//tr[1]//td[1]")
-	WebElement editmessage;*/
 
 	@FindBy(xpath="//button[contains(@class,'btn btn-primary')]")
 	WebElement update;
@@ -178,18 +176,23 @@ public class CustomersPage {
 
 
 	}
-	/*public String viewCustomer(String viewname)
+	public String viewCustomer()
 	{
 		elementutil.click(actions);
 		waitutil.waitForVisibility(view);
 		elementutil.click(view);
-		
+		String actmsg=elementutil.getText(viewcontact);
 
-		
+		System.out.println("verifyViewCustomer: "+actmsg);
+		return actmsg;
 
 
 
-	}*/
+
+
+
+
+	}
 	public String editCustomer(String edited)
 	{
 		elementutil.click(actions);
@@ -198,7 +201,7 @@ public class CustomersPage {
 		elementutil.clear(mobilenum);
 
 
-		
+
 		elementutil.sendKeys(mobilenum, edited);
 
 		//waitutil.waitForVisibility(update);

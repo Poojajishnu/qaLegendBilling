@@ -17,7 +17,8 @@ public class LoginTest extends Base
 	  LoginPage lp=new LoginPage(driver);
 	  String actualMsg=lp.doLogin(username, password);
 	  
-	  String expectedMsg="Welcome admin,";
+	  String expectedMsg="Welcome Admin,";
+	  		
 	  Assert.assertEquals(actualMsg, expectedMsg);
 	  
   }

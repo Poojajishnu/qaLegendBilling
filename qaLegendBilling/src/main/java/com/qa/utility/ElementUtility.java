@@ -62,7 +62,7 @@ public class ElementUtility {
 		try {
 			FileInputStream fis = new FileInputStream (src);
 			pro=new Properties();
-			pro.load(fis);
+			pro.load(fis);  //to read data from property file
 		} catch (Exception e) {
 
 			e.printStackTrace();
